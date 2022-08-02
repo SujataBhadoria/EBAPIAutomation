@@ -10,24 +10,24 @@ public class LargestElementinArray {
 			{
 				if(arr[i]>arr[j])
 				{
-					int temp=arr[i];
+					int temp = arr[i];
 					arr[i]=arr[j];
 					arr[j]=temp;
 				}
 			}
-			
 		}
 		System.out.println(arr[arr.length-1]);
+		
 	}
 	
 	public void largestElementSimple(int arr[])
 	{
 		int max=arr[0];
-		for(int i =0; i<arr.length; i++)
+		for(int i=0; i<arr.length; i++)
 		{
 			if(arr[i]>max)
 			{
-				max = arr[i];
+				max=arr[i];
 			}
 		}
 		System.out.println(max);
@@ -36,7 +36,7 @@ public class LargestElementinArray {
 	public void SmallestElementSimple(int arr[])
 	{
 		int min=arr[0];
-		for(int i=0; i<arr.length; i++)
+		for(int i=0; i<arr.length;i++)
 		{
 			if(arr[i]<min)
 			{
@@ -44,7 +44,6 @@ public class LargestElementinArray {
 			}
 		}
 		System.out.print(min);
-		
 	}
 	
 	

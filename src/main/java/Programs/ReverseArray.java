@@ -32,7 +32,7 @@ public class ReverseArray {
 	
 	public static void sorting()
 	{
-		int array[] = {1,2,3,4,5,6};
+		int array[] = {2,3,6,4,5,11};
 		int temp;
 		
 		for(int i=0; i<array.length; i++)

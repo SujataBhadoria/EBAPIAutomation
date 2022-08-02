@@ -6,18 +6,19 @@ public class Encapsulation {
 	
 	public static void main(String args[])
 	{
-		Encapsulation ep = new Encapsulation();
-		ep.setEmployeeID(10);
-		System.out.println(ep.getEmployeeID());
+		Encapsulation emp = new Encapsulation();
+		emp.setEmployeeId(10);
+		emp.getEmployeeId();
 	}
 	
-	public void setEmployeeID(int eid)
+	public void setEmployeeId(int empid)
 	{
-		emp_id = eid;
+		this.emp_id = empid;
 	}
 	
-	public int getEmployeeID()
+	public int getEmployeeId()
 	{
+		System.out.println(emp_id);
 		return emp_id;
 	}
 }

@@ -2,17 +2,14 @@ package Programs;
 
 public class NumberOfDigits {
 	public static void main(String args[]) {
-		
-		int num = 123;
+		int num = 3458;
 		int digit = 0;
 		
 		while(num>0)
 		{
-			num = num/10;
 			digit++;
-			
+			num = num/10;
 		}
-		System.out.println(digit);
-	}
-
-}
+		
+		System.out.print(digit);
+	}}

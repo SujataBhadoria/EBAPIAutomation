@@ -5,24 +5,28 @@ import java.util.HashMap;
 public class NumberOfWordsHashMap {
 	
 	public static void main(String args[]) {
-	String str = "My Name is Sujata Sujata Sujata here I am";
-	String split[] = str.split(" ");
 	
-	HashMap<String,Integer> map = new HashMap<String,Integer>();
+		String str = "My name is Sujata Bhadoria Sujata";
+		String split[] = str.split(" ");
+		
+		HashMap<String, Integer> hm = new HashMap<String, Integer>();
+		
+		for(String s : split)
+		{
+			if(hm.containsKey(s))
+			{
+				int count = hm.get(s);
+				hm.put(s, count+1);
+			}
+			else
+			{
+				hm.put(s, 1);
+			}
+			
+		}
+		
+	System.out.print(hm);
 	
-	for( int i=0; i<split.length; i++)
-	{
-		if(map.containsKey(split[i]))
-		{
-			int count = map.get(split[i]);
-			map.put(split[i], count+1);
-		}
-		else
-		{
-			map.put(split[i], 1);
-		}
+	
 	}
-	
-	System.out.println(map);
-}
 }

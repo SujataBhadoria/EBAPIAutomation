@@ -8,49 +8,53 @@ public class DuplicateCharInString {
 	
 		public static void dupChar() {
 		String str = "Sujattas";
-		char[] chars = str.toLowerCase().toCharArray();
-		
-		for(int i = 0; i<chars.length; i++)
+		for(int i = 0; i<str.length(); i++)
 		{
-			for (int j = i+1; j<chars.length; j++)
+			for (int j=i+1; j<str.length(); j++)
 			{
-				if(chars[i]==chars[j])
+				if(str.toLowerCase().charAt(i)==str.toLowerCase().charAt(j))
 				{
-					System.out.println(chars[j]); 
+					System.out.print(str.charAt(j));
 				}
 			}
-		}}
+		}
+		System.out.println();
+		}
 		
 		public static void dupArray() {
 			int a[] = {1,2,1,3,4,2,3,6,6};  
-			for(int i=0; i<a.length; i++)
+			for(int i = 0; i<a.length; i++)
 			{
-				for(int j=i+1; j<a.length; j++)
+				for (int j=i+1; j<a.length; j++)
 				{
-					if(a[i] == a[j])
+					if(a[i]==a[j])
 					{
-						//List<Integer> list =  Arrays.asList(a[j]);
-							System.out.println(a[j]);
+						System.out.print(a[j]);
 					}
 				}
 			}
-			
+			System.out.println();
 		}
 		
 		public static void dupWordinString() {
 			String str = "My name is Sujata Sujata";
-			String[] split = str.split(" ");
+			String str1[] = str.split(" ");
 			
-			for(int i=0; i<split.length; i++)
+			for(int i=0; i<str1.length; i++)
+			{
+				for(int j=i+1; j<str1.length; j++)
 				{
-				for(int j=i+1; j<split.length; j++)
-				{
-					if(split[i].equals(split[j]))
-					{
-						System.out.println(split[j]);
-					}
+					if(str1[i].equalsIgnoreCase(str1[j]))
+						{
+						System.out.print(str1[j]);
+						}
 				}
-				}
+			}
+			
+			
+			
+			
+			
 			
 		}
 		

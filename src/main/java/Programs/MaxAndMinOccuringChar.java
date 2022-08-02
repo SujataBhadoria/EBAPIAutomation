@@ -6,43 +6,47 @@ public class MaxAndMinOccuringChar {
 	{
 		String str = "My Name is Sujata Bhadoria";
 		char string[] = str.toCharArray();
-		
 		int freq[] = new int[str.length()];
-		char minchar = string[0];
-		char maxchar = string[0];
 		
-		for(int i=0; i<string.length; i++)
+		for(int i=0; i<str.length(); i++)
 		{
 			freq[i]=1;
-			for(int j=i+1; j<string.length; j++)
+			for(int j=i+1; j<str.length(); j++)
 			{
-				if(string[i]==string[j] && string[i] != ' ')
+				
+				if(string[i]==string[j] && string[i]!= ' ')
 				{
 					freq[i]++;
-					string[j] = ' '; // Set string[j] to 0 to avoid printing visited character  
+					string[j]=0;
 				}
 			}
-			System.out.println(freq[i]);
 		}
 		
-		int min = freq[0],max = freq[0];
+		char maxchar = string[0];
+		char minchar = string[0];
+		int max = freq[0];
+		int min = freq[0];
+		
 		for(int i=0; i<freq.length; i++)
 		{
-		if(min>freq[i])
-		{
-			min=freq[i];
-			minchar = string[i];
+			if(freq[i]>max)
+			{
+				max = freq[i];
+				maxchar = string[i];
+			}
 		}
 		
-		if(max<freq[i])
+		for(int i=0; i<freq.length; i++)
 		{
-			max=freq[i];
-			maxchar = string[i];
-		}
+			if(freq[i]<min)
+			{
+				min = freq[i];
+				minchar = string[i];
+			}
 		}
 		
-		System.out.println("Minimum occurring character: " + minchar +" and count: " + min);  
-        System.out.println("Maximum occurring character: " + maxchar +" and count: " + max);  
+		System.out.println("Count of max occuring char " + maxchar +" is "+ max);
+		System.out.println("Count of min occuring char " + minchar +" is "+ min);
 	}
 
 }

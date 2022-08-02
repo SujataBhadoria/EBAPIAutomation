@@ -5,16 +5,16 @@ public class ReverseEachWordOfString {
 	public static void main(String args[]) {
 		
 		String str = "Java is a good programming language";
-		String words[] = str.split(" ");
-		String revword = "";
+		String split[] = str.split(" ");
+		String rev="";
 		
-		for(String w: words)
+		for(String s : split)
 		{
-			StringBuilder sb = new StringBuilder(w);
+			StringBuilder sb = new StringBuilder(s);
 			sb.reverse();
-			revword = revword + sb.toString()+" ";
+			rev = rev + sb.toString()+" ";
 		}
-		System.out.print(revword);
+		System.out.print(rev);
 	}
 
 }
